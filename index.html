@@ -1,148 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catálogo de pedras e bijuterias inspiradas no estilo carioca e nas praias do Rio de Janeiro. Explore coleções exclusivas, galeria e compre direto pelo WhatsApp.">
-  <meta name="author" content="Pedras & Bijus - Rio">
-  <meta name="theme-color" content="#00b4d8">
-
-  <!-- Open Graph para redes sociais -->
-  <meta property="og:title" content="Pedras & Bijus - Rio">
-  <meta property="og:description" content="Pedras naturais e bijuterias artesanais inspiradas no estilo carioca.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Pedras & Bijus - Rio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Catálogo de pedras e bijuterias inspiradas no estilo carioca e nas praias do Rio de Janeiro. Explore coleções exclusivas, galeria e compre direto pelo WhatsApp.">
+<meta name="author" content="Pedras & Bijus - Rio">
+<title>Pedras & Bijus - Rio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="icon-logo">
-        <circle cx="32" cy="32" r="12" fill="#ffd166"/>
-        <path d="M0 45 Q16 30 32 45 T64 45 V64 H0 Z" fill="#00b4d8"/>
-      </svg>
-      <span>Pedras & Bijus</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#colecoes">Coleções</a></li>
-        <li><a href="#rio">Rio & Estilo</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Slider -->
-  <section id="home" class="slider">
-    <div class="slides">
-      <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1500&q=80')">
-        <div class="overlay">
-          <h1>Pedras Naturais</h1>
-          <p>Beleza única, direto das praias cariocas</p>
-        </div>
-      </div>
-      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80')">
-        <div class="overlay">
-          <h1>Bijuterias Artesanais</h1>
-          <p>Estilo com alma do Rio</p>
-        </div>
+<!-- Cabeçalho -->
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="12" fill="#ffd166"/><path d="M0 45 Q16 30 32 45 T64 45 V64 H0 Z" fill="#00b4d8"/></svg>
+    <span>Pedras & Bijus</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#colecoes">Coleções</a></li>
+      <li><a href="#rio">Rio & Estilo</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Slider -->
+<section id="home" class="slider">
+  <div class="slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1500&q=80')">
+      <div class="overlay">
+        <h1>Pedras Naturais</h1>
+        <p>Beleza única, direto das praias cariocas</p>
       </div>
     </div>
-    <div class="slider-controls">
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
-    </div>
-  </section>
-
-  <!-- Catálogo de Produtos -->
-  <section id="produtos" class="reveal">
-    <h2>Nossos Produtos</h2>
-    <div class="grid">
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1612817159949-ec038b35c2c2?auto=format&fit=crop&w=500&q=80" alt="Pedra Quartzo Rosa">
-        <h3>Quartzo Rosa</h3>
-        <p>Pedra do amor e da harmonia.</p>
-        <button onclick="comprarWhatsApp('Quartzo Rosa')">Comprar no WhatsApp</button>
-      </div>
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1600181953367-f8d3a35c2c4f?auto=format&fit=crop&w=500&q=80" alt="Colar de Conchas">
-        <h3>Colar de Conchas</h3>
-        <p>Feito à mão, com inspiração no mar.</p>
-        <button onclick="comprarWhatsApp('Colar de Conchas')">Comprar no WhatsApp</button>
-      </div>
-      <div class="card reveal">
-        <img src="https://images.unsplash.com/photo-1621961453866-8bbf9a84c590?auto=format&fit=crop&w=500&q=80" alt="Pulseira de Pedras">
-        <h3>Pulseira de Pedras</h3>
-        <p>Energia positiva em cada detalhe.</p>
-        <button onclick="comprarWhatsApp('Pulseira de Pedras')">Comprar no WhatsApp</button>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80')">
+      <div class="overlay">
+        <h1>Bijuterias Artesanais</h1>
+        <p>Estilo com alma do Rio</p>
       </div>
     </div>
-  </section>
-
-  <!-- Coleções -->
-  <section id="colecoes" class="reveal">
-    <h2>Coleções</h2>
-    <p>Explore nossas linhas exclusivas de inspiração carioca:</p>
-    <div class="colecao praia reveal">
-      <h3>Coleção Praia</h3>
-      <p>Bijuterias leves e descontraídas, feitas para combinar com o sol e o mar.</p>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1612817159949-ec038b35c2c2?auto=format&fit=crop&w=1500&q=80')">
+      <div class="overlay">
+        <h1>Design Único</h1>
+        <p>Cada peça conta uma história</p>
+      </div>
     </div>
-    <div class="colecao energia reveal">
-      <h3>Coleção Energia</h3>
-      <p>Peças com pedras que transmitem boas vibrações e força espiritual.</p>
+  </div>
+</section>
+
+<!-- Produtos -->
+<section id="produtos" class="reveal">
+  <h2>Nossos Produtos</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1612817159949-ec038b35c2c2?auto=format&fit=crop&w=500&q=80" alt="Quartzo Rosa">
+      <h3>Quartzo Rosa</h3>
+      <p>Pedra do amor e da harmonia, perfeita para pulseiras e colares delicados.</p>
+      <button onclick="comprarWhatsApp('Quartzo Rosa')">Comprar no WhatsApp</button>
     </div>
-    <div class="colecao amor reveal">
-      <h3>Coleção Amor</h3>
-      <p>Pedras e bijus que simbolizam carinho, afeto e conexões verdadeiras.</p>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600181953367-f8d3a35c2c4f?auto=format&fit=crop&w=500&q=80" alt="Colar de Conchas">
+      <h3>Colar de Conchas</h3>
+      <p>Feito à mão, inspirado no mar e nas praias do Rio de Janeiro.</p>
+      <button onclick="comprarWhatsApp('Colar de Conchas')">Comprar no WhatsApp</button>
     </div>
-  </section>
-
-  <!-- Rio & Estilo -->
-  <section id="rio" class="reveal">
-    <h2>Rio & Estilo</h2>
-    <p>O Rio de Janeiro é muito mais que uma cidade: é uma forma de viver...</p>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="reveal">
-    <h2>Sobre Nós</h2>
-    <p>Inspirados pelas praias do Rio de Janeiro, criamos peças exclusivas...</p>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" class="reveal">
-    <h2>Blog</h2>
-    <p>Histórias, dicas e estilo de vida carioca.</p>
-    <a href="blog.html">Ver posts</a>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="reveal">
-    <h2>Contato</h2>
-    <p>📩 contato@pedrasbijus.com</p>
-    <p>📱 (21) 99999-9999</p>
-    <div id="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.330025212548!2d-43.19707778442529!3d-22.908333985015955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd598dfd6a7%3A0xd12d51e6e1dba939!2sCopacabana%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1637626902627!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1621961453866-8bbf9a84c590?auto=format&fit=crop&w=500&q=80" alt="Pulseira de Pedras">
+      <h3>Pulseira de Pedras</h3>
+      <p>Energia positiva em cada detalhe, perfeita para complementar seu estilo.</p>
+      <button onclick="comprarWhatsApp('Pulseira de Pedras')">Comprar no WhatsApp</button>
     </div>
-  </section>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1592336695172-6aa87a6c0d3e?auto=format&fit=crop&w=500&q=80" alt="Brincos Artesanais">
+      <h3>Brincos Artesanais</h3>
+      <p>Peças únicas feitas à mão, com inspiração tropical carioca.</p>
+      <button onclick="comprarWhatsApp('Brincos Artesanais')">Comprar no WhatsApp</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Pedras & Bijus - Rio | Todos os direitos reservados</p>
-  </footer>
+<!-- Coleções -->
+<section id="colecoes" class="reveal">
+  <h2>Coleções</h2>
+  <div class="colecao praia reveal">
+    <h3>Coleção Praia</h3>
+    <p>Bijuterias leves e descontraídas, feitas para combinar com o sol e o mar.</p>
+    <img src="https://images.unsplash.com/photo-1496317556649-f930d733eea2?auto=format&fit=crop&w=600&q=80" alt="Coleção Praia">
+  </div>
+  <div class="colecao energia reveal">
+    <h3>Coleção Energia</h3>
+    <p>Peças com pedras que transmitem boas vibrações e força espiritual.</p>
+    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" alt="Coleção Energia">
+  </div>
+  <div class="colecao amor reveal">
+    <h3>Coleção Amor</h3>
+    <p>Pedras e bijus que simbolizam carinho, afeto e conexões verdadeiras.</p>
+    <img src="https://images.unsplash.com/photo-1600181953245-7d1a1a60deed?auto=format&fit=crop&w=600&q=80" alt="Coleção Amor">
+  </div>
+</section>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5521999999999" class="whatsapp-float" target="_blank" aria-label="Converse pelo WhatsApp">💬</a>
+<!-- Rio & Estilo -->
+<section id="rio" class="reveal">
+  <h2>Rio & Estilo</h2>
+  <p>O Rio de Janeiro é muito mais que uma cidade: é um estilo de vida. Das praias à Zona Sul, do calçadão de Copacabana às festas culturais, o Rio inspira cores, texturas e a leveza de viver com estilo próprio.</p>
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Rio Lifestyle">
+</section>
 
-  <script src="script.js"></script>
+<!-- Sobre -->
+<section id="sobre" class="reveal">
+  <h2>Sobre Nós</h2>
+  <p>Era uma vez um casal apaixonado por pedras e bijuterias. Começaram fazendo cada peça cuidadosamente à mão para amigos e familiares. Com o tempo, a qualidade e beleza das peças chamaram atenção, e o hobby virou paixão. Hoje, transformaram seu talento em uma marca reconhecida, trazendo o estilo carioca para cada criação. Cada peça que você vê aqui tem história, cuidado e inspiração do Rio de Janeiro.</p>
+  <img src="https://images.unsplash.com/photo-1590608897129-79dc5f216e44?auto=format&fit=crop&w=800&q=80" alt="Casal Artesãos">
+</section>
+
+<!-- Blog -->
+<section id="blog" class="reveal">
+  <h2>Blog</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Rio Life Style">
+      <h3>Viver o Rio com Estilo</h3>
+      <p>Dicas de lifestyle inspiradas nas praias, bares e cultura carioca.</p>
+      <a href="#">Ler mais</a>
+    </div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Praia e estilo">
+      <h3>Looks de Praia</h3>
+      <p>Como combinar suas bijuterias com o clima do Rio.</p>
+      <a href="#">Ler mais</a>
+    </div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1592336695172-6aa87a6c0d3e?auto=format&fit=crop&w=500&q=80" alt="Pedras">
+      <h3>Como usar pedras</h3>
+      <p>Dicas de combinações, energias e estilos para cada ocasião.</p>
+      <a href="#">Ler mais</a>
+    </div>
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1621961453866-8bbf9a84c590?auto=format&fit=crop&w=500&q=80" alt="Bijuterias">
+      <h3>Bijuterias no dia a dia</h3>
+      <p>Inspiração para incorporar peças naturais em looks urbanos.</p>
+      <a href="#">Ler mais</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="reveal">
+  <h2>Contato</h2>
+  <p>Email: contato@pedrasbijus.com</p>
+  <p>Telefone: (21) 99999-9999</p>
+  <div id="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.330025212548!2d-43.19707778442529!3d-22.908333985015955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd598dfd6a7%3A0xd12d51e6e1dba939!2sCopacabana%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1637626902627!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2025 Pedras & Bijus - Rio | Todos os direitos reservados</p>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/5521999999999" class="whatsapp-float" target="_blank" aria-label="Converse pelo WhatsApp">💬</a>
+
+<script src="script.js"></script>
 </body>
 </html>

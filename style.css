@@ -1,205 +1,39 @@
-/* Reset e fontes */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+// Slider automático a cada 1,5s
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(index){
+  slides.forEach((slide,i)=>{
+    slide.classList.remove('active');
+    if(i===index) slide.classList.add('active');
+  });
 }
 
-body {
-  background: #fffaf3;
-  color: #333;
-  line-height: 1.6;
-}
+// Avança automaticamente
+setInterval(()=>{
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 1500);
 
-/* Cabeçalho */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #00b4d8;
-  color: white;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-}
-
-header .logo svg {
-  width: 50px;
-  height: 50px;
-}
-
-header .logo span {
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Slider */
-.slider {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.slides {
-  position: relative;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.slide .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background: rgba(0,0,0,0.4);
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-}
-
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Seções */
-section {
-  padding: 3rem 1rem;
-}
-
-/* Produtos */
-#produtos .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-.card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* Coleções */
-#colecoes {
-  background: #f0faff;
-}
-
-.colecao {
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.colecao.praia { background: #ffeecf; }
-.colecao.energia { background: #d9f7be; }
-.colecao.amor { background: #ffd6e7; }
-
-/* Contato */
-#contato {
-  background: #f9f9f9;
-}
-
-/* Rodapé */
-footer {
-  background: #00b4d8;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* WhatsApp */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 0.7rem;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* Reveal efeito */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsividade */
-@media(max-width: 768px){
-  header {
-    flex-direction: column;
-    text-align: center;
+// Reveal efeito no scroll
+function reveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  for(let i=0;i<reveals.length;i++){
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 150;
+    if(elementTop < windowHeight - elementVisible){
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
   }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .slider {
-    height: 40vh;
-  }
+}
+window.addEventListener('scroll',reveal);
+
+// WhatsApp
+function comprarWhatsApp(produto){
+  const WA_NUMBER = "5521999999999"; 
+  const url = `https://wa.me/${WA_NUMBER}?text=Olá! Gostaria de comprar o produto: ${encodeURIComponent(produto)}`;
+  window.open(url,'_blank');
 }
