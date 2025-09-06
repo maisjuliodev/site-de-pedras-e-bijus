@@ -1,0 +1,60 @@
+* {
+padding: 2rem;
+background: #f0faff;
+}
+.colecao {
+margin: 1rem 0;
+padding: 1rem;
+border-radius: 10px;
+}
+.colecao.praia {
+background: #ffeecf;
+}
+.colecao.energia {
+background: #d9f7be;
+}
+.colecao.amor {
+background: #ffd6e7;
+}
+
+
+/* Contato */
+#contato {
+padding: 2rem;
+background: #f9f9f9;
+}
+
+
+footer {
+background: #00b4d8;
+color: white;
+text-align: center;
+padding: 1rem;
+}
+
+
+/* WhatsApp */
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25d366;
+color: white;
+font-size: 2rem;
+padding: 0.5rem 0.7rem;
+border-radius: 50%;
+text-decoration: none;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* Efeitos Reveal */
+.reveal {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease;
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
